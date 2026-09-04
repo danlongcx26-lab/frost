@@ -1,147 +1,165 @@
-local Players = game:GetService("Players")
-local HttpService = game:GetService("HttpService")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local RunService = game:GetService("RunService")
+local TDS = loadstring(game:HttpGet("https://raw.githubusercontent.com/DuxiiT/auto-strat/refs/heads/main/Library.lua"))()
 
-local LocalPlayer = Players.LocalPlayer
-local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
-
-local RemoteFunction = ReplicatedStorage:WaitForChild("RemoteFunction")
-
-local activeStratThread = nil
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AmonguszzZ/AetherModded/refs/heads/main/AetherHub.lua"))()
-TDS:Loadout("Pyromancer", "Hunter", "EvolvedKingpin", "None", "None")
-if game.PlaceId == 3260590327 then
-    RemoteFunction:InvokeServer("Multiplayer", "v2:start", {
-        difficulty = "Easy",
-        mode = "hardcore",
-        count = 1
-    })
-else
-    print("Game Not Supported")
-end
-
+TDS:Loadout("Farm", "EvolvedOperator", "EvolvedEnforcer", "EvolvedKingpin", "EvolvedJuggernaut")
+TDS:Mode("Hardcore")
 TDS:GameInfo("Wretched Front", {})
 
-task.spawn(function()
-    local GuiS = loadstring(game:HttpGet("https://raw.githubusercontent.com/AmonguszzZ/AetherModded/refs/heads/main/GuiTracker.lua"))()
-end)
-
-local function StartStrategy()
-wait(2.5)
-TDS:RemoveIndex()
-TDS:Place("Pyromancer", -2.0989227294921875, 1.009635329246521, -34.57014465332031)
-TDS:SetTarget(1, "Farthest")
+TDS:Place("Farm", 20.93840789794922, 1.0235885381698608, 34.8693962097168)
+TDS:Place("Farm", 16.89063262939453, 1.1614142656326294, 35.00324249267578)
+TDS:Place("Farm", 19.018878936767578, 1.1045074462890625, 38.33629608154297)
+TDS:Place("Farm", 22.618366241455078, 0.9624189138412476, 38.06170654296875)
 TDS:Ready()
 
-TDS:VoteSkip(1, 25)
+-- [ Wave 1 ] --
+TDS:Place("Farm", 24.641456604003906, 1.0379931926727295, 34.82538986206055)
+TDS:Place("Farm", 22.241466522216797, 0.988031804561615, 31.318138122558594)
+
+-- [ Wave 2 ] --
+TDS:Place("Farm", 21.569583892822266, 0.8931868672370911, 27.300321578979492)
+TDS:Place("Farm", 22.335893630981445, 0.7801514267921448, 23.670551300048828)
+TDS:Place("Farm", 23.673646926879883, 0.6456214189529419, 20.023605346679688)
+
+-- [ Wave 3 ] --
+TDS:Place("Farm", 25.20638656616211, 0.48406118154525757, 15.709062576293945)
+TDS:Upgrade(10)
+TDS:Upgrade(9)
+TDS:Upgrade(8)
+
+-- [ Wave 4 ] --
+TDS:Upgrade(7)
+TDS:Upgrade(6)
+TDS:Upgrade(5)
 TDS:Upgrade(1)
-TDS:Upgrade(1)
+TDS:Upgrade(4)
+TDS:Upgrade(3)
+TDS:Upgrade(2)
 
-TDS:VoteSkip(6)
-TDS:Upgrade(1)
+-- [ Wave 5 ] --
+TDS:Place("EvolvedOperator", 6.442323684692383, 1.389037847518921, 27.810556411743164)
+TDS:Upgrade(11)
+TDS:Upgrade(11)
 
-TDS:Upgrade(1)
+-- [ Wave 6 ] --
+TDS:Place("EvolvedOperator", 3.7777247428894043, 1.4146870374679565, 27.921398162841797)
+TDS:Upgrade(12)
+TDS:Upgrade(12)
+TDS:Place("EvolvedOperator", 6.3385515213012695, 1.3786213397979736, 30.441755294799805)
+TDS:Upgrade(13)
 
-TDS:Place("Hunter", 1.5090651512145996, 0.5713815689086914, 14.419164657592773)
+-- [ Wave 7 ] --
+TDS:Upgrade(13)
+TDS:Place("EvolvedOperator", 3.7749223709106445, 1.420363187789917, 30.507585525512695)
+TDS:Upgrade(14)
+TDS:Upgrade(14)
 
+-- [ Wave 8 ] --
+TDS:Place("EvolvedOperator", 1.1934924125671387, 1.4396412372589111, 28.116474151611328)
+TDS:Upgrade(15)
+TDS:Upgrade(15)
 
-TDS:Place("Hunter", 3.570600986480713, 0.9113662242889404, 18.20372200012207)
+-- [ Wave 9 ] --
+TDS:Place("EvolvedOperator", 1.08355712890625, 1.446134090423584, 30.69029426574707)
+TDS:Upgrade(16)
+TDS:Upgrade(16)
+TDS:Place("EvolvedOperator", 6.198680877685547, 1.377928376197815, 32.95958709716797)
+TDS:Upgrade(17)
+TDS:Upgrade(17)
+
+-- [ Wave 10 ] --
+TDS:Place("EvolvedOperator", 3.6695990562438965, 1.4205987453460693, 33.01538848876953)
+TDS:Upgrade(18)
+TDS:Upgrade(18)
+
+-- [ Wave 11 ] --
+TDS:Place("EvolvedOperator", 1.0621824264526367, 1.4529688358306885, 33.23760986328125)
+TDS:Upgrade(19)
+TDS:Upgrade(19)
+
+-- [ Wave 12 ] --
+TDS:VoteSkip(12)
+TDS:Place("EvolvedEnforcer", 11.296151161193848, 1.232000708580017, 22.345720291137695)
+TDS:Upgrade(20)
+
+-- [ Wave 13 ] --
+TDS:VoteSkip(13)
+
+-- [ Wave 14 ] --
+TDS:Upgrade(20)
 TDS:VoteSkip(14)
-TDS:Place("Hunter", 0.24097543954849243, 1.317692518234253, 18.51652717590332)
 
+-- [ Wave 15 ] --
+TDS:Place("EvolvedEnforcer", 9.160499572753906, 1.3042564392089844, 22.527559280395508)
+TDS:Upgrade(21)
 TDS:VoteSkip(15)
-TDS:Place("Hunter", 1.720466136932373, 1.384239912033081, 22.47343635559082)
 
-TDS:Place("Hunter", 5.2701520919799805, 1.3515396118164062, 22.529003143310547)
+-- [ Wave 16 ] --
+TDS:Upgrade(21)
+TDS:VoteSkip(16)
+TDS:Upgrade(2)
+TDS:Upgrade(3)
 
-TDS:Place("Hunter", 8.8175687789917, 1.3109925985336304, 22.54141616821289)
+-- [ Wave 17 ] --
+TDS:Upgrade(4)
+TDS:Upgrade(1)
+TDS:Upgrade(5)
+TDS:VoteSkip(17)
+TDS:Upgrade(6)
+TDS:Upgrade(7)
 
-TDS:Place("Hunter", 9.301279067993164, 0.847939133644104, 18.969970703125)
-TDS:Place("Hunter", 6.011168479919434, 1.3946723937988281, 28.527118682861328)
+-- [ Wave 18 ] --
+TDS:Upgrade(8)
+TDS:Upgrade(9)
+TDS:Upgrade(10)
+TDS:VoteSkip(18)
 
-TDS:Place("EvolvedKingpin", 2.5719375610351562, 1.4263112545013428, 27.979778289794922)
+-- [ Wave 19 ] --
+TDS:Place("EvolvedEnforcer", 7.144805908203125, 1.3353368043899536, 22.630443572998047)
+TDS:Upgrade(22)
+TDS:VoteSkip(19)
+TDS:Upgrade(22)
 
-TDS:Place("EvolvedKingpin", -1.284123420715332, 1.4632039070129395, 28.251195907592773)
+-- [ Wave 20 ] --
+TDS:Place("EvolvedEnforcer", 10.131978034973145, 1.0217839479446411, 20.445091247558594)
+TDS:Upgrade(23)
+TDS:VoteSkip(20)
 
-end
+-- [ Wave 21 ] --
+TDS:Upgrade(23)
+TDS:VoteSkip(21)
+TDS:Place("EvolvedEnforcer", 8.04286003112793, 1.1664544343948364, 20.758773803710938)
 
-local function GetMatchStatus()
-    local success, status = pcall(function()
-        local uiRoot = PlayerGui:FindFirstChild("ReactGameNewRewards")
-        if not uiRoot then return nil end
+-- [ Wave 22 ] --
+TDS:Upgrade(24)
+TDS:Upgrade(24)
+TDS:VoteSkip(22)
 
-        local mainFrame = uiRoot:FindFirstChild("Frame")
-        if not mainFrame or not mainFrame.Visible then return nil end
+-- [ Wave 23 ] --
+TDS:Upgrade(14)
+TDS:Upgrade(13)
+TDS:Upgrade(17)
+TDS:Upgrade(18)
+TDS:Upgrade(19)
+TDS:Upgrade(16)
+TDS:VoteSkip(23)
+TDS:Upgrade(15)
+TDS:Upgrade(12)
 
-        local gameOver = mainFrame:FindFirstChild("gameOver")
-        if not gameOver or not gameOver.Visible then return nil end
+-- [ Wave 24 ] --
+TDS:Upgrade(11)
+TDS:Upgrade(14)
+TDS:VoteSkip(24)
 
-        local rewardsScreen = gameOver:FindFirstChild("RewardsScreen")
-        if not rewardsScreen or not rewardsScreen.Visible then return nil end
+-- [ Wave 25 ] --
+TDS:VoteSkip(25)
+TDS:Place("EvolvedJuggernaut", 3.5604910850524902, 1.356626272201538, 22.209794998168945)
 
-        local topBanner = rewardsScreen:FindFirstChild("RewardBanner")
-        if not topBanner then return nil end
+-- [ Wave 26 ] --
+TDS:Upgrade(25)
+TDS:VoteSkip(26)
 
-        local label = topBanner:FindFirstChild("textLabel") or topBanner:FindFirstChildOfClass("TextLabel")
-        if not label then return nil end
+-- [ Wave 27 ] --
+TDS:VoteSkip(27)
 
-        local txt = label.Text:upper()
-        if txt == "" then return nil end
-
-        if txt:find("TRIUMPH") or txt:find("VICTORY") or txt:find("WIN") then
-            return "WIN"
-        elseif txt:find("LOST") or txt:find("DEFEAT") or txt:find("FAIL") then
-            return "LOSS"
-        end
-        return nil
-    end)
-    
-    if success then return status end
-    return nil
-end
-
-task.spawn(function()
-    activeStratThread = task.spawn(StartStrategy)
-
-    while true do
-        task.wait(0.5)
-
-        local currentStatus = GetMatchStatus()
-        
-        if currentStatus == "LOSS" then
-       
-            if activeStratThread and coroutine.status(activeStratThread) ~= "dead" then
-                task.cancel(activeStratThread)
-                activeStratThread = nil
-            end
-          
-			wait(5.5)
-            for i = 1, 1 do
-				wait(1)
-                local Event = game:GetService("ReplicatedStorage").RemoteFunction
-                local Result = Event:InvokeServer(
-                    "Voting",
-                    "Skip"
-                )
-                local ExpectedResult = table.unpack({
-                    true
-                })
-                
-                if i < 1 then
-                    task.wait(1)
-                end
-            end
-
-            repeat 
-                task.wait(1) 
-            until GetMatchStatus() == nil
-
-            task.wait(5)
-			
-            activeStratThread = task.spawn(StartStrategy)
-        end
-    end
-end)
-
+-- [ Wave 28 ] --
+TDS:Upgrade(25)
+TDS:VoteSkip(28)
